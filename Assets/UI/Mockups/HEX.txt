@@ -1,0 +1,3 @@
+0D103F 50% alpha - font shadow
+93CCFF - main background
+0082E7 - game over bar

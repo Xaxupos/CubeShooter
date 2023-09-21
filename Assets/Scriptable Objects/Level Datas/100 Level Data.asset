@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce10610ba3ed4c3429991fcdac6058b2, type: 3}
-  m_Name: 50 Level Data
+  m_Name: 100 Level Data
   m_EditorClassIdentifier: 
   sceneToLoadName: Main Menu
-  levelName: 50 Blues
-  squareColor: {r: 0, g: 0.5529412, b: 0.91372555, a: 1}
-  squareCount: 50
+  levelName: 100 Greens
+  squareColor: {r: 0, g: 0.9960785, b: 0, a: 1}
+  squareCount: 100
   squareInitLifes: 3

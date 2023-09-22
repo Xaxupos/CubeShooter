@@ -28,6 +28,8 @@ public class HealthSystem : MonoBehaviour, IDamageable
         if (currentHealth <= 0)
         {
             isDead = true;
+            GameManager.Instance.remainingSquares.Remove(owner);
+            GameManager.Instance.OnSquareRemovedCompletely?.Invoke();
             Destroy(gameObject);
             return;
         }

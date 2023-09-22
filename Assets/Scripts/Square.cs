@@ -5,6 +5,7 @@ public class Square : MonoBehaviour
 {
     [Header("References")]
     public HealthSystem healthSystem;
+    public SquareRotator squareRotator;
     public SpriteRenderer squareSpriteRenderer;
     public MMF_Player spawnFeedback;
 

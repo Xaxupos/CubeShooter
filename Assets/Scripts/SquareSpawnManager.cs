@@ -8,9 +8,6 @@ public class SquareSpawnManager : MonoBehaviour
     public Square squarePrefab;
     public Transform squaresParent;
 
-    [Header("Settings")]
-    public List<Square> remainingSquares = new List<Square>();
-
     #region Singleton Setup
     public static SquareSpawnManager Instance;
 
@@ -31,12 +28,12 @@ public class SquareSpawnManager : MonoBehaviour
 
     private IEnumerator SpawnInitialSquares()
     {
-        remainingSquares = new List<Square>();
+        GameManager.Instance.remainingSquares = new List<Square>();
 
         for(int i=0; i< LevelDataStorageManager.Instance.currentLevelData.squareCount; i++)
         {
             Square square = Instantiate(squarePrefab);
-            remainingSquares.Add(square);
+            GameManager.Instance.remainingSquares.Add(square);
             square.SetSquareRandomFreePosition();
             square.spawnFeedback.PlayFeedbacks();
             square.squareSpriteRenderer.color = LevelDataStorageManager.Instance.currentLevelData.squareColor;

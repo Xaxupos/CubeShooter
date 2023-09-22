@@ -1,10 +1,12 @@
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
+using TMPro;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour, IDamageable
 {
     [Header("References")]
+    public TMP_Text healthText;
     public Square owner;
 
     [Header("Properties")]
@@ -17,6 +19,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
     {
         SetMaxHealth();
         currentHealth = maxHealth;
+        healthText.text = currentHealth.ToString();
     }
 
     public void TakeDamage(int damage)
@@ -24,6 +27,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         if (isDead) return;
 
         currentHealth -= damage;
+        healthText.text = currentHealth.ToString();
 
         if (currentHealth <= 0)
         {

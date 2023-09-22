@@ -54,6 +54,8 @@ public class SquareSpawnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
+        if (square == null) yield break;
+
         square.gameObject.SetActive(true);
         square.SetSquareRandomFreePosition();
         square.spawnFeedback.PlayFeedbacks();

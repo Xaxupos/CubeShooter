@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4632755854273694524}
-  moveSpeed: 5
+  moveSpeed: 6
   damage: 1
 --- !u!61 &4482304381173797884
 BoxCollider2D:

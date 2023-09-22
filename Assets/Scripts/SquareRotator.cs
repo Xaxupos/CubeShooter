@@ -13,9 +13,16 @@ public class SquareRotator : MonoBehaviour
     [Range(0f, 360f)] public float randomMaxRotateDegree = 360.0f;
     public bool isRotating = false;
 
+    private Tween rotateTween;
+
     private void OnEnable()
     {
         StartCoroutine(StartRandomRotations());
+    }
+
+    private void OnDisable()
+    {
+        rotateTween.Kill();
     }
 
     private IEnumerator StartRandomRotations()
@@ -35,7 +42,10 @@ public class SquareRotator : MonoBehaviour
     {
         var randomRotation = Random.Range(0, randomMaxRotateDegree);
         isRotating = true;
-        DOVirtual.Float(owner.transform.eulerAngles.z, randomRotation, rotationTime, r =>
+
+        if (rotateTween != null) rotateTween.Kill();
+
+        rotateTween = DOVirtual.Float(owner.transform.eulerAngles.z, randomRotation, rotationTime, r =>
         {
             owner.transform.eulerAngles = new Vector3(owner.transform.eulerAngles.x, owner.transform.eulerAngles.y, r);
         }).OnComplete(() => isRotating = false); ;

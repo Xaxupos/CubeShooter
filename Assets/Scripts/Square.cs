@@ -48,10 +48,4 @@ public class Square : MonoBehaviour
 
         return new Vector3(randomX, randomY, 0f);
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, squareSize);
-    }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 500 Level Data
   m_EditorClassIdentifier: 
   sceneToLoadName: Game
-  levelName: 100 Reds
+  levelName: 500 Reds
   squareColor: {r: 0.91372555, g: 0, b: 0, a: 1}
   squareCount: 500
   squareInitLifes: 3

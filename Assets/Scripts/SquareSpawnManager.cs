@@ -6,6 +6,7 @@ public class SquareSpawnManager : MonoBehaviour
 {
     [Header("References")]
     public Square squarePrefab;
+    public Transform squaresParent;
 
     [Header("Settings")]
     public List<Square> remainingSquares = new List<Square>();
@@ -39,6 +40,7 @@ public class SquareSpawnManager : MonoBehaviour
             square.SetSquareRandomFreePosition();
             square.spawnFeedback.PlayFeedbacks();
             square.squareSpriteRenderer.color = LevelDataStorageManager.Instance.currentLevelData.squareColor;
+            square.transform.SetParent(squaresParent, true);
             yield return new WaitForFixedUpdate();
         }
     }

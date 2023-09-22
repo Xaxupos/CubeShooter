@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squarePrefab: {fileID: 2240385996530281224, guid: 22fed1fd0f1c41d42bdf9e7b726bb2ad, type: 3}
+  squaresParent: {fileID: 1287280899}
   remainingSquares: []
 --- !u!4 &401759299
 Transform:
@@ -519,6 +520,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
   m_PrefabInstance: {fileID: 994571294}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1287280898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1287280899}
+  m_Layer: 0
+  m_Name: Squares Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1287280899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287280898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.889066, y: -5.597579, z: -0.8312779}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1380963396
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Settings")]
     public List<Square> remainingSquares = new List<Square>();
+    public bool gameStarted = false;
     public bool gameEnded = false;
 
     [Header("Events")]

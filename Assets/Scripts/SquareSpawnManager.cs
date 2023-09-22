@@ -40,6 +40,8 @@ public class SquareSpawnManager : MonoBehaviour
             square.transform.SetParent(squaresParent, true);
             yield return new WaitForFixedUpdate();
         }
+
+        GameManager.Instance.gameStarted = true;
     }
 
     public void StartRespawnCoroutine(Square square, float delay)

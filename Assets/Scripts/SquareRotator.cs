@@ -20,13 +20,17 @@ public class SquareRotator : MonoBehaviour
         StartCoroutine(StartRandomRotations());
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
-        rotateTween.Kill();
+        if (rotateTween != null)
+            rotateTween.Kill();
     }
 
     private IEnumerator StartRandomRotations()
     {
+        if(!GameManager.Instance.gameStarted)
+            yield return new WaitUntil(() => GameManager.Instance.gameStarted);
+
         while(!owner.healthSystem.isDead)
         {
             yield return new WaitUntil(() => !isRotating);
@@ -42,8 +46,6 @@ public class SquareRotator : MonoBehaviour
     {
         var randomRotation = Random.Range(0, randomMaxRotateDegree);
         isRotating = true;
-
-        if (rotateTween != null) rotateTween.Kill();
 
         rotateTween = DOVirtual.Float(owner.transform.eulerAngles.z, randomRotation, rotationTime, r =>
         {

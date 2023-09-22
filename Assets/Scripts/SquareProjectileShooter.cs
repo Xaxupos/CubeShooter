@@ -24,6 +24,8 @@ public class SquareProjectileShooter : MonoBehaviour
 
     private IEnumerator StartShootingCoroutine()
     {
+        yield return new WaitUntil(() => GameManager.Instance.gameStarted);
+
         while(!owner.healthSystem.isDead)
         {
             yield return new WaitForSeconds(shootingDelay);

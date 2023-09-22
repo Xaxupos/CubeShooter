@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce10610ba3ed4c3429991fcdac6058b2, type: 3}
   m_Name: 100 Level Data
   m_EditorClassIdentifier: 
-  sceneToLoadName: Main Menu
+  sceneToLoadName: Game
   levelName: 100 Greens
   squareColor: {r: 0, g: 0.9960785, b: 0, a: 1}
   squareCount: 100

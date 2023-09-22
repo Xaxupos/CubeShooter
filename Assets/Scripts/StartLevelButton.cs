@@ -22,4 +22,12 @@ public class StartLevelButton : MonoBehaviour
         onLevelSetFeedbacks.PlayFeedbacks();
         initDone = true;
     }
+
+    public void LoadLevel()
+    {
+        if(!initDone) return;
+
+        LoadingManager.Instance.LoadGameLevel(LevelDataStorageManager.Instance.currentLevelData);
+    }
+
 }

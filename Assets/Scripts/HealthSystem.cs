@@ -34,7 +34,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
             isDead = true;
             GameManager.Instance.remainingSquares.Remove(owner);
             GameManager.Instance.OnSquareRemovedCompletely?.Invoke();
-            Destroy(gameObject);
+            Destroy(owner.gameObject);
             return;
         }
 

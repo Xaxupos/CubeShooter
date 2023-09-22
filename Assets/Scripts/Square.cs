@@ -1,4 +1,5 @@
 using MoreMountains.Feedbacks;
+using System.Collections;
 using UnityEngine;
 
 public class Square : MonoBehaviour
@@ -14,7 +15,7 @@ public class Square : MonoBehaviour
 
     public void RespawnSquare(float delay)
     {
-        StartCoroutine(SquareSpawnManager.Instance.RespawnCoroutine(this,delay));
+        SquareSpawnManager.Instance.StartRespawnCoroutine(this, delay);
         gameObject.SetActive(false);
     }
 

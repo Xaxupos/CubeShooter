@@ -42,6 +42,11 @@ public class SquareSpawnManager : MonoBehaviour
         }
     }
 
+    public void StartRespawnCoroutine(Square square, float delay)
+    {
+        StartCoroutine(RespawnCoroutine(square, delay));
+    }
+
     //Created this so the coroutine doesn't end after object being disabled.
     //Could also just disable sprite renderer and collider
     //but I wanted to make it this way, it's more readable and gives more control

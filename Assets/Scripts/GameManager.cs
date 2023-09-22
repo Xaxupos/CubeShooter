@@ -10,13 +10,29 @@ public class GameManager : MonoBehaviour
 
     [Header("Settings")]
     public List<Square> remainingSquares = new List<Square>();
+    public bool gameEnded = false;
 
     [Header("Events")]
     public UnityEvent OnSquareRemovedCompletely;
 
     private void Start()
     {
-        OnSquareRemovedCompletely.AddListener(() => gameUIController.UpdateEnemiesLeftCount(remainingSquares.Count));
+        OnSquareRemovedCompletely.AddListener(EnemyDie);
+    }
+
+    private void EnemyDie()
+    {
+        gameUIController.UpdateEnemiesLeftCount(remainingSquares.Count);
+        if(remainingSquares.Count <= 1)
+        {
+            gameEnded = true;
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+
     }
 
     #region Singleton Setup

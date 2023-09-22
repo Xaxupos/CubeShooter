@@ -23,10 +23,15 @@ namespace MoreMountains.Tools
 		[Tooltip("defines whether the scene will be loaded using Unity's native API or MoreMountains' way")]
 		public LoadingSceneModes LoadingSceneMode = LoadingSceneModes.UnityNative;
 
-		/// <summary>
-		/// Loads the scene specified in the inspector
-		/// </summary>
-		public virtual void LoadScene()
+        private void Start()
+        {
+			LoadScene();
+        }
+
+        /// <summary>
+        /// Loads the scene specified in the inspector
+        /// </summary>
+        public virtual void LoadScene()
 		{
 			switch (LoadingSceneMode)
 			{

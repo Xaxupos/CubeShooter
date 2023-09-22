@@ -9,4 +9,6 @@ public class LevelDataSO : ScriptableObject
     public Color squareColor = Color.blue;
     public int squareCount = 50;
     public int squareInitLifes = 3;
+    public float respawnDelay = 2.0f;
+    public float cameraSize = 12.0f;
 }

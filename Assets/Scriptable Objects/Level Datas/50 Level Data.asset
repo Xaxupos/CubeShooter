@@ -17,3 +17,5 @@ MonoBehaviour:
   squareColor: {r: 0, g: 0.5529412, b: 0.91372555, a: 1}
   squareCount: 50
   squareInitLifes: 3
+  respawnDelay: 2
+  cameraSize: 12

@@ -19,14 +19,20 @@ public class LoadingManager : MonoBehaviour
     }
     #endregion
 
-    public void LoadGameLevel(LevelDataSO levelData)
+    public void LoadMainMenu()
     {
-        fadeTransitionManager.FadeIn(() => LoadSceneAsync(levelData));
+        LevelDataStorageManager.Instance.isLevelSelected = false;
+        fadeTransitionManager.FadeIn(() => LoadSceneAsync("Main Menu"));
     }
 
-    private void LoadSceneAsync(LevelDataSO levelData)
+    public void LoadGameLevel(LevelDataSO levelData)
     {
-        var operation = SceneManager.LoadSceneAsync(levelData.sceneToLoadName);
+        fadeTransitionManager.FadeIn(() => LoadSceneAsync(levelData.sceneToLoadName)) ;
+    }
+
+    private void LoadSceneAsync(string levelName)
+    {
+        var operation = SceneManager.LoadSceneAsync(levelName);
         StartCoroutine(CheckLoadingComplete(operation));
     }
 

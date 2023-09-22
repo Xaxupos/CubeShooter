@@ -15,26 +15,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent OnSquareRemovedCompletely;
-
-    private void Start()
-    {
-        OnSquareRemovedCompletely.AddListener(EnemyDie);
-    }
-
-    private void EnemyDie()
-    {
-        gameUIController.UpdateEnemiesLeftCount(remainingSquares.Count);
-        if(remainingSquares.Count <= 1)
-        {
-            gameEnded = true;
-            GameOver();
-        }
-    }
-
-    private void GameOver()
-    {
-
-    }
+    public UnityEvent OnGameOver;
 
     #region Singleton Setup
     public static GameManager Instance;
@@ -47,4 +28,19 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
+    private void Start()
+    {
+        OnSquareRemovedCompletely.AddListener(EnemyDie);
+    }
+
+    private void EnemyDie()
+    {
+        gameUIController.UpdateEnemiesLeftCount(remainingSquares.Count);
+        if(remainingSquares.Count <= 1)
+        {
+            gameEnded = true;
+            OnGameOver?.Invoke();
+        }
+    }
 }

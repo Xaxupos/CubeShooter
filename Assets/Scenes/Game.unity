@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 225
+      value: 279.1583
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_SizeDelta.y
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 2.100006
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -289,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7389211536625664720, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_text
-      value: 50 Blue
+      value: 250 Oranges
       objectReference: {fileID: 0}
     - target: {fileID: 7389211536625664720, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_fontSize
@@ -551,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -908,7 +908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 356.4379
+      value: 407.9757
       objectReference: {fileID: 0}
     - target: {fileID: 2850498035855596325, guid: 21c92a049d679e84ab2ec97865b64d8d, type: 3}
       propertyPath: m_SizeDelta.y
